@@ -14,10 +14,8 @@ export type Task = {
 }
 
 export function Reviver(key: string, value: any): any {
-    if(key === "" && Array.isArray(value)){
-        
+    if(key === "" && Array.isArray(value)){ 
         return value;
-
     }
     switch (key) {
         case "id":
